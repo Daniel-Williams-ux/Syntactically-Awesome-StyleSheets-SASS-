@@ -1,29 +1,41 @@
 /*
-Store Data with Sass Variables
-One feature of Sass that's different than CSS is it uses variables. They are declared and set to store data, similar to JavaScript.
+Nest CSS with Sass
+Sass allows nesting of CSS rules, which is a useful way of organizing a style sheet.
 
-In JavaScript, variables are defined using the let and const keywords. In Sass, variables start with a $ followed by the variable name.
+Normally, each element is targeted on a different line to style it, like so:
 
-Here are a couple examples:
-
-$main-fonts: Arial, sans-serif;
-$headings-color: green;
-And to use the variables:
-
-h1 {
-  font-family: $main-fonts;
-  color: $headings-color;
+nav {
+  background-color: red;
 }
-One example where variables are useful is when a number of elements need to be the same color. If that color is changed, the only place to edit the code is the variable value.
 
-Create a variable $text-color and set it to red. Then change the value of the color property for the .blog-post and h2 to the $text-color variable.
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+For a large project, the CSS file will have many lines and rules. This is where nesting can help organize your code by placing child style rules within the respective parent elements:
+
+nav {
+  background-color: red;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+  }
+}
 */
 
-$text-color: red;
-
-  .header{
-    text-align: center;
-  }
-  .blog-post, h2 {
-    color: $text-color;
-  }
+.blog-post { 
+    h1 {
+     text-align: center;
+     color: blue;
+    }
+    p {
+        font-size: 20px;
+    } 
+  }  
