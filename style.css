@@ -1,4 +1,7 @@
-html, body {
-  height: 100%;
-  width: 100%;
-}
+.header {
+  text-align: center; }
+
+.blog-post, h2 {
+  color: red; }
+
+/*# sourceMappingURL=style.css.map */
